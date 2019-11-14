@@ -1,4 +1,17 @@
-""" read a image sequence to a video """
+"""
+read an image sequence to a video
+
+avi file support list:
+    I420: YUV uncompressed
+    PIMI: MPEG-1 encoding
+    XVID: MPEG-4 encoding
+
+mp4 file support list:
+    mp4v
+
+flv file support list:
+    flv1
+"""
 import numpy as np
 import cv2
 
