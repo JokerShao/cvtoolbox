@@ -31,3 +31,7 @@
 *.exe
 *.out
 *.app
+
+*.zip
+learnpytorch/data
+learnpytorch/examples
