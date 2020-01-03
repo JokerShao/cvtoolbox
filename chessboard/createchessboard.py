@@ -23,5 +23,5 @@ for row in range(0, IMAGE_HEIGHT, int(IMAGE_HEIGHT/ROW_SQUARE_NUM)):
     flag = not flag
 
 cv2.imshow('chessboard', chessboard)
-cv2.imwrite('chessboard.jpg', chessboard)
+# cv2.imwrite('chessboard.jpg', chessboard)
 cv2.waitKey(0)

@@ -35,3 +35,7 @@
 *.zip
 learnpytorch/data
 learnpytorch/examples
+
+*.pyc
+
+*.ipynb
