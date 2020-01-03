@@ -119,18 +119,4 @@ class DenseNet(nn.Module):
                     del state_dict[key]
             model.load_state_dict(state_dict)
         return model
-()
-————————————————
-版权声明：本文为CSDN博主「xiaohu2022」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/xiaohu2022/article/details/85560788
-            )
-        ]))
-————————————————
-版权声明：本文为CSDN博主「xiaohu2022」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/xiaohu2022/article/details/85560788
-        )
 
-
-
-
-    ))))

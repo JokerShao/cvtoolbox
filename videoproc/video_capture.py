@@ -13,9 +13,8 @@ while True:
         retkey = cv2.waitKey(1) & 0xFF
         if retkey == ord('q'):
             break
-        elif retkey == ord('s'):
-            cv2.imwrite(str(cnt)+'.jpg', frame)
-            cnt+=1
+        cv2.imwrite('/home/zexi/ellipses_pose_estimate/plane/'+str(cnt)+'.png', frame)
+        cnt+=1
 
 cv2.destroyAllWindows()
 
