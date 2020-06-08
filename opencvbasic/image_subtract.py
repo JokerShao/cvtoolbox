@@ -48,17 +48,7 @@ def tt1():
     # cv2.imshow('subtract32', subtract32)
     # cv2.imshow('subtract43', subtract43)
 
-def tt2():
-    """ doc string """
-    image1 = cv2.imread('E:\\P4Workspace\\qiedianceshi\\intrinsic_params\\dahengvision\\4.jpg')
-    image2 = cv2.imread('E:\\P4Workspace\\qiedianceshi\\intrinsic_params\\dahengvision\\4-undist.jpg')
 
-    subtract21 = cv2.subtract(image1, image2)
-    subtrack12 = cv2.subtract(image2, image1)
-
-    cv2.imshow('sub21', subtract21)
-    cv2.imshow('sub12', subtrack12)
-    cv2.waitKey(0)
 
 def tt3():
     """ doc string """

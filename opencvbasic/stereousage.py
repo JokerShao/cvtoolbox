@@ -30,7 +30,7 @@ print(F/F[2,2])
 print(F_computed/F_computed[2,2])
 
 
-# # 1左眼 2右眼
+# 1左眼 2右眼
 T21 = np.vstack((np.hstack((R21, t21)), np.array([[0, 0, 0, 1]])))
 T12 = np.linalg.inv(T21)
 
