@@ -9,7 +9,7 @@ import pdb
 if __name__ == '__main__':
 
     # soure iamge points
-    im = array(Image.open('E:\\greenscreen\\14_cut\\13.jpg'))  
+    im = array(Image.open('E:\\greenscreen\\14_cut\\13.jpg'))
     imshow(im)
 
     # raw image 4 points

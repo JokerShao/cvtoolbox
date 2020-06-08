@@ -13,6 +13,9 @@ def video2imageseq(videopath, imgseqpath):
 
     while True:
         retval, frame = capture.read()
+
+        frame = cv2.resize(frame, (1920, 1080))
+
         if not retval:
             break
         # mod = cnt % 5
@@ -32,7 +35,7 @@ def video2imageseq(videopath, imgseqpath):
 
 
 if __name__ == '__main__':
-    videopath = 'D:\\DataRepository\\greenscreen\\mov\\xiaowu_green.mov'
-    imgseqpath = 'D:\\DataRepository\\greenscreen\\xiaowu_green\\'
+    videopath = 'D:\\gitrepo\\cvtoolbox\\videoproc\\00041.MTS'
+    imgseqpath = 'D:\\gitrepo\\cvtoolbox\\videoproc\\00041\\'
 
     video2imageseq(videopath, imgseqpath)

@@ -52,8 +52,8 @@ def imageseq2video():
 # def imageseq2video(imgseqpath, videopath):
 def imageseq2video0():
     """ doc string """
-    cnt = 956 # 图像开始序号
-    number = 524 # 图像持续帧数
+    cnt = 0 # 图像开始序号
+    number = 1900 # 图像持续帧数
 
     target = np.zeros((1080, 960, 3), dtype=np.uint8)
 
@@ -61,8 +61,8 @@ def imageseq2video0():
     vw = cv2.VideoWriter('./outsplit.avi', fourcc, 24.0, (960, 1080))
 
     for nn in range(number):
-        srcpath = 'D:\\DataRepository\\greenscreen\\processed\\2019_09_29_primatte\\'+str(nn+cnt)+'src.png'
-        dstpath = 'D:\\DataRepository\\greenscreen\\processed\\2019_09_29_primatte\\'+str(nn+cnt)+'dst.png'
+        srcpath = 'D:\\greenscreen\\recording5_huawei_output\\'+str(nn+cnt)+'.png'
+        dstpath = 'D:\\greenscreen\\recording5_huawei\\'+str(nn+cnt)+'.png'
         src = cv2.imread(srcpath)
         dst = cv2.imread(dstpath)
         src_small = cv2.resize(src, (960, 540))
@@ -73,7 +73,6 @@ def imageseq2video0():
 
         cv2.imshow('target', target)
         cv2.waitKey(1)
-
 
         print(nn+cnt)
         # img = cv2.imread(imgpath)
