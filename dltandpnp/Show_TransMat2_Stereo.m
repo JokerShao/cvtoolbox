@@ -22,7 +22,7 @@ for i=1:size(A,1)
     hold on
 
     
-    P=A(i,3:4);
+    P=A(i,4:5);
     U=invK*[P,1]';
     
     U2 =[ comp_distortion_oulu(U(1:2),kc);1];
@@ -35,8 +35,8 @@ for i=1:size(A,1)
     
     
     
-    plot3(A(i,1),A(i,2),0,'r*',...
-          [T(1),T(1)+V(1)],[T(2),T(2)+V(2)],[T(3),T(3)+V(3)],'c-');
+    plot3(A(i,1),A(i,2),A(i,3),'r*',...
+           [T(1),T(1)+V(1)],[T(2),T(2)+V(2)],[T(3),T(3)+V(3)],'c-');
     
     
    
@@ -45,5 +45,7 @@ for i=1:size(A,1)
 end
 
 axis equal
+
+view(59, 67);
 
 end
