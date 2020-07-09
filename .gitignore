@@ -36,6 +36,11 @@
 learnpytorch/data
 learnpytorch/examples
 
+# python cache
 *.pyc
 
+# ipython notebook file
 *.ipynb
+
+# macos cache
+.DS_store

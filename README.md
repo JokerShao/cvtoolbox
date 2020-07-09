@@ -2,13 +2,9 @@
 
 Some utilities code for image preprocessing and 3D rotation.
 
-## Useful Library
-
-### [numpy-quaternion][1]
-
-This package creates a quaternion type in python, and further enables numpy to create and manipulate arrays of quaternions. The usual algebraic operations (addition and multiplication) are available, along with numerous properties like norm and various types of distance measures between two quaternions. There are also additional functions like “squad” and “slerp” interpolation, and conversions to and from axis-angle, matrix, and Euler-angle representations of rotations. The core of the code is written in C for speed.
-
-[1]:https://pypi.org/project/numpy-quaternion/
-
-## pymodule
-explain for python sys.modules and sys.path.
+# PnP_Matlab
+### Reference
+- DLT
+- P3P: Gao X S , Hou X R , Tang J , et al. Complete solution classification for the perspective-three-point problem[J]. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2003, 25(8):0-943.
+- EPnP: Moreno-Noguer F , Lepetit V , Fua P . Accurate Non-Iterative O(n) Solution to the PnP Problem[C]// IEEE International Conference on Computer Vision. IEEE, 2007.
+- AP3P: Ke T, Roumeliotis S. An Efficient Algebraic Solution to the Perspective-Three-Point Problem[J]. 2017.
