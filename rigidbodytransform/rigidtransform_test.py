@@ -2,8 +2,12 @@ import time
 import numpy as np
 from rigidtransform import \
     rotm2quat, quat2rotm, axang2quat, \
-    quat2axang, axang2rotm, rotm2axang
+    quat2axang, axang2rotm, rotm2axang, \
+    rvec2axang, rvec2quat, rvec2rotm, \
+    axang2rvec, quat2rvec, rotm2rvec
 from quatmath import quatrotate
+
+import cv2
 
 
 if __name__ == '__main__':
@@ -37,6 +41,29 @@ if __name__ == '__main__':
 
     p2 = quatrotate(axangtoquat, p)
     print('p2\n', p2, '\n')
+
+    # test rvec
+    rvec = np.random.random((1,3))
+    print('rvec:\n', rvec)
+
+    rvectoaxang = rvec2axang(rvec)
+    print('rvectoaxang\n', rvectoaxang)
+    axangtorvec = axang2rvec(rvectoaxang)
+    print('axangtorvec:\n', axangtorvec)
+
+    rvectoquat = rvec2quat(rvec)
+    print('rvectoquat:\n', rvectoquat)
+    quattorvec = quat2rvec(rvectoquat)
+    print('quattorvec:\n', quattorvec)
+
+    rvectorotm = rvec2rotm(rvec)
+    print('rvectortm:\n', rvectorotm)
+    rotmtorvec = rotm2rvec(rvectorotm)
+    print('rotmtorvec:\n', rotmtorvec)
+
+    rvectorotm_cv, _ = cv2.Rodrigues(rvec)
+    print('rvectorotm_cv:\n', rvectorotm_cv)
+
 
     time.sleep(1)
 
