@@ -3,7 +3,7 @@ from quat2rotm import quat2rotm
 from rotm2quat import rotm2quat
 from quatnormalize import quatnormalize
 from quatmultiply import quatmultiply
-from axang2rotm import axang2rotm
+from axang2rotm import axang2rotm, axang2rotm1
 from quatconj import quatconj
 from quatinv import quatinv
 from quatrotate import quatrotate
@@ -185,6 +185,11 @@ import cv2
 A = np.random.random((3,3))
 R, _ = np.linalg.qr(A)
 
+
+# R = np.array([[-0.8296004  , 0.5419175  ,-0.13449387],
+#               [-0.25247174 ,-0.57891778 ,-0.77531427],
+#               [-0.49801726 ,-0.60924513 , 0.61708928]] )
+
 print(R, '\n')
 
 
@@ -196,6 +201,9 @@ print(quattoaxang, '\n')
 
 axangtorotm = axang2rotm(quattoaxang)
 print(axangtorotm, '\n')
+
+# axangtorotm1 = axang2rotm1(quattoaxang)
+# print(axangtorotm1, '\n')
 
 rotmtoaxang = rotm2axang(axangtorotm)
 print(rotmtoaxang, '\n')
