@@ -11,6 +11,7 @@ cap = cv2.VideoCapture(0)
 ret = cap.set(cv2.CAP_PROP_FRAME_WIDTH, cam_w)
 ret = cap.set(cv2.CAP_PROP_FRAME_HEIGHT, cam_h)
 ret = cap.set(cv2.CAP_PROP_FPS, cam_fps)
+# https://www.fourcc.org/codecs.php
 # fourcc = cv2.VideoWriter_fourcc(*'YUY2')
 fourcc = cv2.VideoWriter_fourcc(*'MJPG')
 ret = cap.set(cv2.CAP_PROP_FOURCC, fourcc)
