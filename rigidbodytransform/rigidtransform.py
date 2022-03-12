@@ -1,8 +1,6 @@
-"""
-Rigid body basic transform, convert between axis angle,
-rotation matrix and quaternion.
-dtype: ndarray
+""" Rigid body basic transform, convert between axis angle, rotation matrix and quaternion.
 
+dtype: ndarray
 q shape:     1x4  w x y z     order
 axang shape: 1x4  x y z theta order
 rvec shape:  1x3  x y z       order
@@ -69,7 +67,8 @@ def axang2quat(axang):
     return q
 
 def axang2rotm(axang):
-    """ convert use rodrigues' formula """
+    """ convert use rodrigues' formula
+    """
     x, y, z, theta = axang[0,0], axang[0,1], axang[0,2], axang[0,3]
     ctheta, stheta = cos(theta), sin(theta)
     ctheta_d1 = 1-ctheta
@@ -158,8 +157,10 @@ def rvec2quat(rvec):
     return q
 
 def skew(v):
-    """ input 3x1 vector """
+    """ input 3x1 vector
+    """
     pass
     # return np.array([0,       -v[2,0], v[1,0] , \
     #                  v[2,0],  0,       -v[0,0], \
     #                  -v[1,0], v[0,0],  0      ]).reshape(3,3)
+
