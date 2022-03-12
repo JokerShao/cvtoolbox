@@ -1,5 +1,5 @@
-"""
-Quaternion basic calculation
+""" Quaternion basic calculation
+
 dtype: ndarray
 shape: 1x4  w x y z order
 author: zexi shao
@@ -37,10 +37,10 @@ def quatmultiply(q1, q2):
     return q
 
 def quatrotate(q, p):
-    """
+    """ Note: This is different with matlab!
+
     p: [x y z] 3x1 vector
     use formula: p1 = q*p*q^-1    p1 = R * p
-    Note: This is different with matlab!
     """
     q0, q1, q2, q3 = q[0,0], q[0,1], q[0,2], q[0,3]
     norm = sqrt(q0*q0+q1*q1+q2*q2+q3*q3)
@@ -52,3 +52,4 @@ def quatrotate(q, p):
                                 (2*q1*q2+2*q0*q3)*x + (1-2*q1*q1-2*q3*q3)*y + (2*q2*q3-2*q0*q1)*z, \
                                 (2*q1*q3-2*q0*q2)*x + (2*q2*q3+2*q0*q1)*y + (1-2*q1*q1-2*q2*q2)*z
     return p1
+
