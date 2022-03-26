@@ -63,6 +63,9 @@ if __name__ == '__main__':
     print('test.b_:'.rjust(13), test.b_)
     print('b:'.rjust(13), b)
 
+    print('id(test.b_):'.rjust(13), id(test.b_))
+    print('id(b):'.rjust(13), id(b))
+
     print('test.c_:'.rjust(13), test.c_)
     print('c:'.rjust(13), c)
     print('c_copy:'.rjust(13), c_copy)
