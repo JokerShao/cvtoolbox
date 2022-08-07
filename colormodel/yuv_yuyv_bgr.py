@@ -3,9 +3,9 @@ import numpy as np
 
 
 def evaluate(real_image3c, dst_image):
-    '''
+    """
     两个三通道图片作差，比较均值和标准差，评估相似性
-    '''
+    """
     eval_ans = list()
 
     sub_ansAB = cv2.subtract(real_image3c, dst_image)
@@ -28,9 +28,9 @@ def evaluate(real_image3c, dst_image):
     print('\nmean B G R Gray stdDev B G R Gray:\n', eval_ans[:4], '__', eval_ans[4:])
 
 def evaluate1c(real_image, dst_image):
-    '''
+    """
     两个单通道图片作差，比较均值和标准差，评估相似性
-    '''
+    """
     eval_ans = list()
 
     sub_ansAB = cv2.subtract(real_image, dst_image)
